@@ -132,7 +132,7 @@ class Users extends CI_Controller {
         fwrite($file, $_xml);
         fclose($file);
         $this->data['tableArray'] = $countarr;
-        
+        $this->data['answerCount'] = $ansvalue;       // sending the number of doctors who chosed this answer
         $this->data['question'] = $_POST['question'];
         $this->data['territory'] = $_POST['territory'];
         $this->data['specialty'] = $_POST['specialty'];
@@ -147,6 +147,8 @@ class Users extends CI_Controller {
     }
 
 
+
+         /******************** EXPORT REPORT ********************/
 
     public function printuserreport(){
         if ($this->input->post("dateto")) {
@@ -344,7 +346,7 @@ class Users extends CI_Controller {
 
 
 
-         /******************** PRINT REPORT ********************/
+         /******************** EXPORT REPORT ********************/
     public function printdocreport(){
         if ($this->input->post("dateto")) {
             $to=date('Y-m-d 00:00:00', strtotime($this->input->post("dateto")));
@@ -411,3 +413,4 @@ class Users extends CI_Controller {
         redirect(base_url().'uploaded/docreport.csv');
     }
 
+}
