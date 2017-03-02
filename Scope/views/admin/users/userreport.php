@@ -39,8 +39,8 @@
 					<thead>
                         <tr>						
 							<th >Answer</th>
-							<th>Percentage of users</th>
-							<th>No. Of Users</th>							
+							<th>Percentage of answers</th>
+							<th>No. Of answers</th>							
 						</tr>
 					</thead>
 					<tbody>

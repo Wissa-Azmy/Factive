@@ -242,10 +242,16 @@ class Users extends CI_Controller {
         
         
         
+            // for ($i = 1; $i <= 10; $i++) {
+            //     $ansvalueratio=($ansvalue[$i]/$allanserscount)*100;
+            //     $countarr[$answer[$i]]=$ansvalueratio;
+               
+            // }
+
             for ($i = 1; $i <= 10; $i++) {
                 $ansvalueratio=($ansvalue[$i]/$allanserscount)*100;
-                $countarr[$answer[$i]]=$ansvalueratio;
-               
+                $countarr[$answer[$i]]= number_format($ansvalueratio, 2, '.', ''); 
+                $totalAnswers = array_sum($ansvalue);
             }
         
         }
@@ -253,9 +259,11 @@ class Users extends CI_Controller {
        
         $fp = fopen(FCPATH.'uploaded/userreport.csv', 'w');
         fputs($fp,b"\xEF\xBB\xBF");         //write utf-8 BOM to file
-        fputcsv($fp, array("Answer","Percentage of users"));
+        fputcsv($fp, array("Answer","Percentage of answers","No. of answers"));
+        $i = 1;
         foreach ($countarr as $key=>$val) {  
-            fputcsv($fp, array($key,round($val)));
+            fputcsv($fp, array($key,$val,$ansvalue[$i]));
+            $i +=1;
         }
         fclose($fp);
     
