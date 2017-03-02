@@ -120,8 +120,9 @@ class Users extends CI_Controller {
            
             for ($i = 1; $i <= 10; $i++) {
                 $ansvalueratio=($ansvalue[$i]/$allanserscount)*100;
-                $countarr[$answer[$i]]=$ansvalueratio;
-                $_xml .=" <set label='".$answer[$i]."' value='".round($ansvalueratio)."' />\r\n";
+                $countarr[$answer[$i]]= number_format($ansvalueratio, 2, '.', ''); 
+                $totalAnswers = array_sum($ansvalue);
+                $_xml .=" <set label='".$answer[$i]."' value='".$ansvalueratio."' />\r\n";
             }
             
         }
@@ -133,6 +134,7 @@ class Users extends CI_Controller {
         fclose($file);
         $this->data['tableArray'] = $countarr;
         $this->data['answerCount'] = $ansvalue;       // sending the number of doctors who chosed this answer
+        $this->data['totalAnswers'] = $totalAnswers;
         $this->data['question'] = $_POST['question'];
         $this->data['territory'] = $_POST['territory'];
         $this->data['specialty'] = $_POST['specialty'];
