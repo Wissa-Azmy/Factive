@@ -157,10 +157,8 @@ class Factiveserv extends Rest_controller {
              $this->response($resp, 200);     
              exit;
          }
-         ///$searchresults1['res']='done';
-         // Retrieve events .
-         //$this->response($searchresults1, 200);
      }
+     
      function  getquestion_post() {
          header("Access-Control-Allow-Origin: *");
          $key = $this->post();
@@ -209,17 +207,12 @@ class Factiveserv extends Rest_controller {
                              $resp['page']="page9.html";
                          }
                      }
-                                         
-             
-             // print_r($items);
-             //echo json_encode($resp);
+
              $this->response($resp, 200);
      
              exit;
          }
-         ///$searchresults1['res']='done';
-         // Retrieve events .
-         //$this->response($searchresults1, 200);
+
      }
      function  doctorsoff_post() {
          header("Access-Control-Allow-Origin: *");
@@ -237,9 +230,6 @@ class Factiveserv extends Rest_controller {
          
          $resp=$searchresults1;
          
-         
-         ///$searchresults1['res']='done';
-         // Retrieve events .
          $this->response($resp, 200);
      }
      

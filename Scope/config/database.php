@@ -71,7 +71,7 @@ $db['default'] = array(
 	 * 'password' => 'q~aTT)Bfm#C0',
 	*/
 	'username' => 'root',
-	'password' => '',
+	'password' => 'root',
 	'database' => 'factive',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
