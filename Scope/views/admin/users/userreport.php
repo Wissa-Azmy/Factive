@@ -39,19 +39,29 @@
 					<thead>
                         <tr>						
 							<th >Answer</th>
-							<th>Percentage of users</th>							
+							<th>Percentage of answers</th>
+							<th>No. Of answers</th>							
 						</tr>
 					</thead>
 					<tbody>
-						<?php
-						foreach($tableArray as $answer => $res){?>
+						<?php $i = 1 ?>
+						<?php foreach($tableArray as $answer => $res):?>
 						<tr class="odd gradeX">
 							<td><?php echo $answer;?></td>
-							<td><?php echo round($res);?></td>
-                           						
+							<td><?php echo $res;?> %</td>
+                           	<td><?= $answerCount[$i]; ?></td> 
+                           	<?php $i += 1 ?>                          						
 						</tr>
-						<?php } ?>
+						<?php endforeach; ?>
+						<tr>
+							<td colspan="3"></td>
 						
+						</tr>
+						<tr>
+							<td>Total No. of Answers</td>
+							<td></td>
+							<td><?= $totalAnswers; ?></td>
+						</tr>
 					</tbody>
 
 </table>
