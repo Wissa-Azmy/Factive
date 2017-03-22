@@ -1,12 +1,12 @@
 <chart caption='Answers Chart' xAxisName='Answers' yAxisName='Percentage of Users' showValues='1' decimals='0' formatNumberScale='0.5'>
- <set label='FACTIVE is Trustworthy.' value='15.954664341761' />
- <set label='FACTIVE has a unique Mechanism of Action.' value='13.426329555362' />
- <set label='FACTIVE has an excellent Microbiological Profile.' value='19.311246730602' />
- <set label='FACTIVE has an optimum Pharmacokinetic Parameters.' value='7.4542284219704' />
- <set label='FACTIVE has an optimum Pharmacokinetic /Pharmacodynamics Parameters.' value='7.279860505667' />
- <set label='FACTIVE is characterized by a good Distribution in Respiratory Tissue.' value='6.1900610287707' />
- <set label='FACTIVE has the lowest potential of Bacterial Resistance Development' value='7.1054925893636' />
- <set label='FACTIVE is associated with high Clinical Effectiveness.' value='10.200523103749' />
- <set label='FACTIVE is associated with high Patient Compliance.' value='8.1952920662598' />
- <set label='FACTIVE is safer and more tolerable compared to other Fluoroquinolones.' value='4.8823016564952' />
+ <set label='FACTIVE is Trustworthy.' value='11.328125' />
+ <set label='FACTIVE has a unique Mechanism of Action.' value='13.28125' />
+ <set label='FACTIVE has an excellent Microbiological Profile.' value='17.96875' />
+ <set label='FACTIVE has an optimum Pharmacokinetic Parameters.' value='9.375' />
+ <set label='FACTIVE has an optimum Pharmacokinetic /Pharmacodynamics Parameters.' value='3.90625' />
+ <set label='FACTIVE is characterized by a good Distribution in Respiratory Tissue.' value='6.25' />
+ <set label='FACTIVE has the lowest potential of Bacterial Resistance Development' value='7.03125' />
+ <set label='FACTIVE is associated with high Clinical Effectiveness.' value='13.28125' />
+ <set label='FACTIVE is associated with high Patient Compliance.' value='13.671875' />
+ <set label='FACTIVE is safer and more tolerable compared to other Fluoroquinolones.' value='3.90625' />
  </chart>

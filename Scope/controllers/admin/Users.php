@@ -75,7 +75,8 @@ class Users extends CI_Controller {
             
             $sql2='SELECT * FROM answers WHERE question_id='.$_POST['question'];
             $searchresults2 = $this->db->query($sql2)->result();
-           
+            
+            $i = 1;
             foreach($searchresults2 as $k=> $answer){
             
                  $sql='SELECT COUNT(*) as mycount FROM user_answers INNER JOIN doctors ON user_answers.user_id=doctors.id '.$where.' AND user_answers.answer_id='.$answer->id;
@@ -83,13 +84,18 @@ class Users extends CI_Controller {
                 $usercount= $this->db->query($sql)->result();
                 
                 if ($allanserscount>0){
+                    $answersCount[$i] =  $usercount[0]->mycount; 
+                    $i++;
                     $ansvalue=($usercount[0]->mycount/$allanserscount)*100;
                 }else{
                     $ansvalue=0;
                 }
-                $countarr[$answer->answer]=$ansvalue;                
+                // $countarr[$answer->answer]=$ansvalue; 
+                $countarr[$answer->answer]= number_format($ansvalue, 2, '.', '');                
                 $_xml .=" <set label='".$answer->answer."' value='".round($ansvalue)."' />\r\n";
             }
+                $ansvalue = $answersCount;
+                $totalAnswers = array_sum($ansvalue);
                        
                // $start_date=strtotime("+1 day", strtotime($start_date));
                // $start_date=date('Y-m-d', $start_date);        

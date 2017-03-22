@@ -76,8 +76,8 @@ h1 {
                     <th>Gender</th>
                     <th>Country</th>                    <th>Create date </th>                </tr>            </thead>            <tbody>                <?php foreach($users as $user){ ?>                    <tr>                        <td><?=$user->id?></td>                        <td><?=$user->fname . ' '. $user->lname?></td>                        <td><?=$user->email?></td>
                         <td><?=$user->gender?></td>
-                        <td><?=$user->desc_en?></td>                        <td><?=$user->register_date;?></td>                                            </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                        <td><?=$user->desc_en?></td>                        <td><?=$user->register_date;?></td>                                            </tr>
+                <?php } ?>
+            </tbody>
+        </table>
 
